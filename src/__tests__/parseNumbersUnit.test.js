@@ -81,4 +81,10 @@ describe('parseNumbersUnit', () => {
       unit: '°C',
     });
   });
+
+  it('special cases', () => {
+    expect(() => parseNumbersUnit('<19')).toThrow(
+      'Can not parseNumbersUnit of: <19',
+    );
+  });
 });
