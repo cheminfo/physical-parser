@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>physical-parser 0.0.3 | Documentation</title>
+  <title>physical-parser 0.1.0 | Documentation</title>
   <meta name='description' content='Try to parse a string containing physical data like bp, mp'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>physical-parser</h3>
-          <div class='mb1'><code>0.0.3</code></div>
+          <div class='mb1'><code>0.1.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -29,9 +29,9 @@
               
                 
                 <li><a
-                  href='#parsebp'
+                  href='#parseboilingpoint'
                   class="">
-                  parseBP
+                  parseBoilingPoint
                   
                 </a>
                 
@@ -39,9 +39,9 @@
               
                 
                 <li><a
-                  href='#parsemp'
+                  href='#parsedensity'
                   class="">
-                  parseMP
+                  parseDensity
                   
                 </a>
                 
@@ -49,9 +49,19 @@
               
                 
                 <li><a
-                  href='#parsenumbersunit'
+                  href='#parsenumbersunits'
                   class="">
-                  parseNumbersUnit
+                  parseNumbersUnits
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#parserefractiveindex'
+                  class="">
+                  parseRefractiveIndex
                   
                 </a>
                 
@@ -72,20 +82,20 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='parsebp'>
-      parseBP
+    <h3 class='fl m0' id='parseboilingpoint'>
+      parseBoilingPoint
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/890e035d825d6eb5db3135aa4d1081edfbbc6d02/src/parseBP.js#L15-L22'>
-      <span>src/parseBP.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/a34c46f127972b80dc0a1fc83271885489ad982a/src/parseBoilingPoint.js#L16-L23'>
+      <span>src/parseBoilingPoint.js</span>
       </a>
     
   </div>
   
 
   
-    <div class='pre p1 fill-light mt0'>parseBP(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>parseBoilingPoint(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -138,7 +148,7 @@
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.temperature.defaultUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.temperature.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -146,7 +156,7 @@
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.temperature.targetUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.temperature.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -174,7 +184,7 @@
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.pressure.defaultUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.pressure.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -182,7 +192,15 @@
 
   
     <tr>
-  <td class='break-word'><span class='code bold'>options.pressure.targetUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.pressure.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.pressure.optional</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -227,20 +245,20 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='parsemp'>
-      parseMP
+    <h3 class='fl m0' id='parsedensity'>
+      parseDensity
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/890e035d825d6eb5db3135aa4d1081edfbbc6d02/src/parseMP.js#L10-L14'>
-      <span>src/parseMP.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/a34c46f127972b80dc0a1fc83271885489ad982a/src/parseDensity.js#L15-L28'>
+      <span>src/parseDensity.js</span>
       </a>
     
   </div>
   
 
   
-    <div class='pre p1 fill-light mt0'>parseMP(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>parseDensity(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -284,18 +302,66 @@
             <tbody class='mt1'>
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.defaultUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.value</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
   </td>
   <td class='break-word'><span></span></td>
 </tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.value.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.value.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
 
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.targetUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.temperature</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
   </td>
   <td class='break-word'><span></span></td>
 </tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.defaultValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
 
 
               
@@ -334,21 +400,21 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='parsenumbersunit'>
-      parseNumbersUnit
+    <h3 class='fl m0' id='parsenumbersunits'>
+      parseNumbersUnits
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/890e035d825d6eb5db3135aa4d1081edfbbc6d02/src/parseNumbersUnit.js#L11-L84'>
-      <span>src/parseNumbersUnit.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/a34c46f127972b80dc0a1fc83271885489ad982a/src/parseNumbersUnits.js#L12-L87'>
+      <span>src/parseNumbersUnits.js</span>
       </a>
     
   </div>
   
 
-  <p>Parse a string that may contain min / max and unit values</p>
+  <p>Parse a string that may contain min / max and units values</p>
 
-    <div class='pre p1 fill-light mt0'>parseNumbersUnit(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>parseNumbersUnits(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -401,7 +467,7 @@
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.defaultUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
@@ -409,10 +475,176 @@
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.targetUnit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  <td class='break-word'><span class='code bold'>options.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
   </td>
   <td class='break-word'><span></span></td>
 </tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.optional</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>Is this value optional. Would through an error if empty and not optional
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='parserefractiveindex'>
+      parseRefractiveIndex
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/physical-parser/blob/a34c46f127972b80dc0a1fc83271885489ad982a/src/parseRefractiveIndex.js#L15-L28'>
+      <span>src/parseRefractiveIndex.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>parseRefractiveIndex(string: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>string</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.value</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.value.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.value.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.temperature</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>
+  
+    (default <code>{}</code>)
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.defaultValue</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.defaultUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
+    <tr>
+  <td class='break-word'><span class='code bold'>options.temperature.targetUnits</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+  
 
 
               
