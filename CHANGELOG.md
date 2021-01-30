@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/cheminfo/physical-parser/compare/v0.1.0...v0.1.1) (2021-01-30)
+
+
+### Bug Fixes
+
+* build script ([1d46c07](https://www.github.com/cheminfo/physical-parser/commit/1d46c07d0fc93e6ad1fdcf3089157c2bcbd97d24))
+* README methods ([c0a3076](https://www.github.com/cheminfo/physical-parser/commit/c0a3076234684ff223e5b44a8a3c1731e6f0a00c))
+
 ## [0.1.0](https://www.github.com/cheminfo/physical-parser/compare/v0.0.3...v0.1.0) (2021-01-30)
 
 
