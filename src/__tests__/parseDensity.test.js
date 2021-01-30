@@ -27,4 +27,17 @@ describe('parseDensity', () => {
       expect(result.temperature.low).toStrictEqual(entry.temperature || 20);
     }
   });
+
+  it('1.15', () => {
+    let result = parseDensity('1.15', {
+      temperature: {
+        defaultUnits: '°C',
+        optional: true,
+      },
+    });
+    expect(result).toStrictEqual({
+      value: { low: 1.15, high: undefined, units: undefined },
+      temperature: {},
+    });
+  });
 });

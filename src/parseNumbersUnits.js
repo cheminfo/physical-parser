@@ -7,14 +7,17 @@ const Qty = require('js-quantities');
  * @param {number} [options.defaultValue]
  * @param {string} [options.defaultUnits]
  * @param {string} [options.targetUnits]
+ * @param {string} [options.optional=false] Is this value optional. Would through an error if empty and not optional
  */
 export function parseNumbersUnits(string = '', options = {}) {
   const {
     defaultUnits = undefined,
     targetUnits = undefined,
     defaultValue = undefined,
+    optional = false,
   } = options;
   let normalized = String(string).replace(/ /g, '').replace(/,/g, '.');
+  if (optional && !normalized) return {};
   let splitter = /^([0-9.Ee-]*)([a-zA-Z °]*)$/;
   if (!normalized.match(splitter)) {
     throw Error(`Can not parseNumbersUnits of: ${string}`);
