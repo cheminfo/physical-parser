@@ -35,7 +35,7 @@ describe('parseBP', () => {
     });
   });
 
-  it('110-120 @ 50 torr', () => {
+  it('110-120 @ 50 torr with targetUnit', () => {
     let result = parseBP('110-120 @ 50 torr', {
       temperature: {
         defaultUnit: '°C',

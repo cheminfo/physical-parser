@@ -32,7 +32,7 @@ describe('parseMP', () => {
     expect(result).toStrictEqual({ low: 110, high: 120, unit: '°C' });
   });
 
-  it('110-120', () => {
+  it('110-120 with targetUnit', () => {
     let result = parseMP('110-120', {
       temperature: {
         defaultUnit: '°C',
