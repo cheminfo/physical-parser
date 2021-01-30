@@ -4,14 +4,14 @@ import { join } from 'path';
 import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
 import Papa from 'papaparse';
 
-import { parseNumbersUnit } from '../parseNumbersUnit';
+import { parseNumbersUnits } from '../parseNumbersUnits';
 
 expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
 
-describe('parseNumbersUnit', () => {
+describe('parseNumbersUnits', () => {
   it('list of simple values', () => {
     let entries = Papa.parse(
-      readFileSync(join(__dirname, 'numbersUnit.csv'), 'utf8'),
+      readFileSync(join(__dirname, 'numbersUnits.csv'), 'utf8'),
       {
         header: true,
         dynamicTyping: true,
@@ -22,73 +22,73 @@ describe('parseNumbersUnit', () => {
       for (let key in entry) {
         if (entry[key] === null) delete entry[key];
       }
-      let result = parseNumbersUnit(entry.value);
+      let result = parseNumbersUnits(entry.value);
       expect(result.low).toStrictEqual(entry.low);
       expect(result.high).toStrictEqual(entry.high);
-      expect(result.unit).toStrictEqual(entry.unit);
+      expect(result.units).toStrictEqual(entry.units);
     }
   });
-  it('defaultUnit', () => {
-    expect(parseNumbersUnit('10-20K', { defaultUnit: '°C' })).toStrictEqual({
+  it('defaultUnits', () => {
+    expect(parseNumbersUnits('10-20K', { defaultUnits: '°C' })).toStrictEqual({
       low: 10,
       high: 20,
-      unit: 'K',
+      units: 'K',
     });
-    expect(parseNumbersUnit('10-20', { defaultUnit: '°C' })).toStrictEqual({
+    expect(parseNumbersUnits('10-20', { defaultUnits: '°C' })).toStrictEqual({
       low: 10,
       high: 20,
-      unit: '°C',
+      units: '°C',
     });
   });
-  it('targetUnit', () => {
+  it('targetUnits', () => {
     expect(
-      parseNumbersUnit('10-20 °K', {
-        defaultUnit: '°C',
-        targetUnit: '°K',
+      parseNumbersUnits('10-20 °K', {
+        defaultUnits: '°C',
+        targetUnits: '°K',
       }),
     ).toStrictEqual({
       low: 10,
       high: 20,
-      unit: '°K',
+      units: '°K',
     });
     expect(
-      parseNumbersUnit('10-20', { defaultUnit: '°K', targetUnit: '°C' }),
+      parseNumbersUnits('10-20', { defaultUnits: '°K', targetUnits: '°C' }),
     ).toMatchCloseTo({
       low: -263.15,
       high: -253.15,
-      unit: '°C',
+      units: '°C',
     });
   });
 
   it('defaultValue', () => {
     expect(
-      parseNumbersUnit('°K', {
+      parseNumbersUnits('°K', {
         defaultValue: 123,
       }),
     ).toStrictEqual({
       low: 123,
       high: undefined,
-      unit: '°K',
+      units: '°K',
     });
     expect(
-      parseNumbersUnit('', {
+      parseNumbersUnits('', {
         defaultValue: '-125--123',
-        defaultUnit: '°C',
+        defaultUnits: '°C',
       }),
     ).toStrictEqual({
       low: -125,
       high: -123,
-      unit: '°C',
+      units: '°C',
     });
   });
 
   it('special cases', () => {
-    expect(() => parseNumbersUnit('<19')).toThrow(
-      'Can not parseNumbersUnit of: <19',
+    expect(() => parseNumbersUnits('<19')).toThrow(
+      'Can not parseNumbersUnits of: <19',
     );
 
-    expect(() => parseNumbersUnit('none')).toThrow(
-      'Can not parseNumbersUnit of: none',
+    expect(() => parseNumbersUnits('none')).toThrow(
+      'Can not parseNumbersUnits of: none',
     );
   });
 });

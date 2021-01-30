@@ -1,27 +1,27 @@
 const Qty = require('js-quantities');
 
 /**
- * Parse a string that may contain min / max and unit values
+ * Parse a string that may contain min / max and units values
  * @param {string} string
  * @param {object} [options={}]
  * @param {number} [options.defaultValue]
- * @param {string} [options.defaultUnit]
- * @param {string} [options.targetUnit]
+ * @param {string} [options.defaultUnits]
+ * @param {string} [options.targetUnits]
  */
-export function parseNumbersUnit(string = '', options = {}) {
+export function parseNumbersUnits(string = '', options = {}) {
   const {
-    defaultUnit = undefined,
-    targetUnit = undefined,
+    defaultUnits = undefined,
+    targetUnits = undefined,
     defaultValue = undefined,
   } = options;
   let normalized = String(string).replace(/ /g, '').replace(/,/g, '.');
   let splitter = /^([0-9.Ee-]*)([a-zA-Z °]*)$/;
   if (!normalized.match(splitter)) {
-    throw Error(`Can not parseNumbersUnit of: ${string}`);
+    throw Error(`Can not parseNumbersUnits of: ${string}`);
   }
 
   let numbers = normalized.replace(splitter, '$1');
-  let unit = normalized.replace(splitter, '$2').trim();
+  let units = normalized.replace(splitter, '$2').trim();
 
   let low;
   let high;
@@ -30,7 +30,7 @@ export function parseNumbersUnit(string = '', options = {}) {
     if (defaultValue) {
       numbers = String(defaultValue).replace(/ /g, '');
     } else {
-      throw Error(`Can not parseNumbersUnit of: ${string}`);
+      throw Error(`Can not parseNumbersUnits of: ${string}`);
     }
   }
 
@@ -58,13 +58,13 @@ export function parseNumbersUnit(string = '', options = {}) {
     high = subparts[1] !== undefined ? Number(subparts[1]) : undefined;
   }
 
-  if (!unit) unit = defaultUnit;
+  if (!units) units = defaultUnits;
 
-  // Should we convert the unit
-  if (targetUnit) {
+  // Should we convert the units
+  if (targetUnits) {
     let convert = Qty.swiftConverter(
-      unit.replace(/°/g, 'temp'),
-      targetUnit.replace(/°/g, 'temp'),
+      units.replace(/°/g, 'temp'),
+      targetUnits.replace(/°/g, 'temp'),
     );
 
     if (low !== undefined) {
@@ -73,12 +73,12 @@ export function parseNumbersUnit(string = '', options = {}) {
     if (high !== undefined) {
       high = convert(high);
     }
-    unit = targetUnit;
+    units = targetUnits;
   }
 
   return {
     low,
     high,
-    unit,
+    units,
   };
 }

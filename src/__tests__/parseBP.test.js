@@ -26,28 +26,28 @@ describe('parseBP', () => {
   it('110-120 @ 50 torr', () => {
     let result = parseBP('110-120 @ 50 torr', {
       temperature: {
-        defaultUnit: '°C',
+        defaultUnits: '°C',
       },
     });
     expect(result).toStrictEqual({
-      temperature: { low: 110, high: 120, unit: '°C' },
-      pressure: { low: 50, high: undefined, unit: 'torr' },
+      temperature: { low: 110, high: 120, units: '°C' },
+      pressure: { low: 50, high: undefined, units: 'torr' },
     });
   });
 
-  it('110-120 @ 50 torr with targetUnit', () => {
+  it('110-120 @ 50 torr with targetUnits', () => {
     let result = parseBP('110-120 @ 50 torr', {
       temperature: {
-        defaultUnit: '°C',
-        targetUnit: '°K',
+        defaultUnits: '°C',
+        targetUnits: '°K',
       },
       pressure: {
-        targetUnit: 'mbar',
+        targetUnits: 'mbar',
       },
     });
     expect(result).toStrictEqual({
-      temperature: { low: 383.15, high: 393.15, unit: '°K' },
-      pressure: { low: 66.661184, high: undefined, unit: 'mbar' },
+      temperature: { low: 383.15, high: 393.15, units: '°K' },
+      pressure: { low: 66.661184, high: undefined, units: 'mbar' },
     });
   });
 });
