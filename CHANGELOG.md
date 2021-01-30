@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.3](https://www.github.com/cheminfo/properties-parser/compare/v0.0.2...v0.0.3) (2021-01-30)
+
+
+### Bug Fixes
+
+* rename package to non conflicting name ([c8ba277](https://www.github.com/cheminfo/properties-parser/commit/c8ba277567c43f573411a1a0734cd837b1bf5d4e))
+
 ### [0.0.2](https://www.github.com/cheminfo/parse-physical/compare/v0.0.1...v0.0.2) (2021-01-30)
 
 
