@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "build": "cheminfo-build --entry src/index.js --root PhysicalParser",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@types/jest": "^26.0.20",
+    "cheminfo-build": "^1.1.9",
     "eslint": "^7.18.0",
     "eslint-config-cheminfo": "^5.2.2",
     "jest": "^26.6.3",
