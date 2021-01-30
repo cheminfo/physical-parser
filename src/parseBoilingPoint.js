@@ -11,8 +11,9 @@ import { parseNumbersUnits } from './parseNumbersUnits';
  * @param {number} [options.pressure.defaultValue]
  * @param {string} [options.pressure.defaultUnits]
  * @param {string} [options.pressure.targetUnits]
+ * @param {string} [options.pressure.optional]
  */
-export function parseBP(string, options = {}) {
+export function parseBoilingPoint(string, options = {}) {
   let parts = String(string).split(/[@/]|, /);
 
   return {

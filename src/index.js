@@ -1,3 +1,4 @@
-export * from './parseBP';
+export * from './parseBoilingPoint';
 export * from './parseDensity';
 export * from './parseNumbersUnits';
+export * from './parseRefractiveIndex';

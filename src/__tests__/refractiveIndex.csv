@@ -1,0 +1,5 @@
+value,low,high,units,temperature,temperatureUnits
+"1,6",1.6,,,,
+"1,25, t=25",1.25,,,25,°C
+"1,326-1,328",1.326,1.328,,,
+1.5,1.5,,,,

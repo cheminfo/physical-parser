@@ -3,20 +3,23 @@ import { join } from 'path';
 
 import Papa from 'papaparse';
 
-import { parseBP } from '../parseBP';
+import { parseBoilingPoint } from '../parseBoilingPoint';
 
-describe('parseBP', () => {
+describe('parseBoilingPoint', () => {
   it('simple values', () => {
-    let entries = Papa.parse(readFileSync(join(__dirname, 'bp.csv'), 'utf8'), {
-      header: true,
-      dynamicTyping: true,
-    }).data;
+    let entries = Papa.parse(
+      readFileSync(join(__dirname, 'boilingPoint.csv'), 'utf8'),
+      {
+        header: true,
+        dynamicTyping: true,
+      },
+    ).data;
 
     for (let entry of entries) {
       for (let key in entry) {
         if (entry[key] === null) delete entry[key];
       }
-      let result = parseBP(entry.value, {
+      let result = parseBoilingPoint(entry.value, {
         pressure: {
           defaultValue: 760,
           defaultUnits: 'torr',
@@ -31,7 +34,7 @@ describe('parseBP', () => {
   });
 
   it('110-120 @ 50 torr', () => {
-    let result = parseBP('110-120 @ 50 torr', {
+    let result = parseBoilingPoint('110-120 @ 50 torr', {
       temperature: {
         defaultUnits: '°C',
       },
@@ -43,7 +46,7 @@ describe('parseBP', () => {
   });
 
   it('110-120 @ 50 torr with targetUnits', () => {
-    let result = parseBP('110-120 @ 50 torr', {
+    let result = parseBoilingPoint('110-120 @ 50 torr', {
       temperature: {
         defaultUnits: '°C',
         targetUnits: '°K',
