@@ -16,10 +16,17 @@ describe('parseBP', () => {
       for (let key in entry) {
         if (entry[key] === null) delete entry[key];
       }
-      let result = parseBP(entry.value, { pressure: { defaultValue: 760 } });
+      let result = parseBP(entry.value, {
+        pressure: {
+          defaultValue: 760,
+          defaultUnits: 'torr',
+          targetUnits: 'torr',
+        },
+      });
       expect(result.temperature.low).toStrictEqual(entry.low);
       expect(result.temperature.high).toStrictEqual(entry.high);
-      expect(result.pressure.low).toStrictEqual(entry.pressure || 760);
+      expect(result.pressure.low).toBeCloseTo(entry.pressure || 760);
+      expect(result.pressure.units).toStrictEqual(entry.pressureUnits);
     }
   });
 
