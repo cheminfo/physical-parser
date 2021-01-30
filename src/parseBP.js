@@ -13,7 +13,7 @@ import { parseNumbersUnit } from './parseNumbersUnit';
  * @param {string} [options.pressure.targetUnit]
  */
 export function parseBP(string, options = {}) {
-  let parts = String(string).replace(/ /g, '').replace(/,/g, '.').split(/[@/]/);
+  let parts = String(string).split(/[@/]|, /);
 
   return {
     temperature: parseNumbersUnit(parts[0], options.temperature),

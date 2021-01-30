@@ -14,7 +14,7 @@ Try to parse a string containing physical data like bp, mp.
 ## Usage
 
 ```js
-import { parseBP, parseMP, parseNumbersUnit } from 'physical-parser';
+import { parseBP, parseDensity, parseNumbersUnit } from 'physical-parser';
 
 let bp = parseBP('100-120 @ 50 mmHg', {
   temperature: {
@@ -28,8 +28,13 @@ let bp = parseBP('100-120 @ 50 mmHg', {
 
 // bp: {temperature: {low: 100, high: 120, unit: '°C'}, pressure: {low: 50, unit: 'mmHg'}};
 
-let density = parseNumbersUnit('1.5-1.51', {
-  defaultUnit: 'g/mL'
+let density = parseDensity('1.5-1.51, t=25', {
+  value: {
+    defaultUnit: 'g/mL'
+  },
+  temperature: {
+    defaultUnit: '°C'
+  }
 })
 
 // density: {low: 1.5, high: 1.51, unit: 'g/mL'}

@@ -1,3 +1,3 @@
 export * from './parseBP';
-export * from './parseMP';
+export * from './parseDensity';
 export * from './parseNumbersUnit';
