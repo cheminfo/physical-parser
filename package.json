@@ -9,7 +9,7 @@
     "src"
   ],
   "scripts": {
-    "build": "cheminfo-build --entry src/index.js --root PhysicalParser",
+    "build": "rollup -c && cheminfo-build --entry lib/index.js --root PhysicalParser",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
