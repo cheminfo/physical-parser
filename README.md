@@ -14,10 +14,27 @@ Try to parse a string containing physical data like bp, mp.
 ## Usage
 
 ```js
-import library from 'parse-physical';
+import { parseBP, parseMP, parseNumbersUnit } from 'parse-physical';
 
-const result = library(args);
-// result is ...
+let bp = parseBP('100-120 @ 50 mmHg', {
+  temperature: {
+    defaultUnit: '°C'
+  }
+  pressure: {
+    defaultValue: 760,
+    defaultUnit: 'mmHg'
+  }
+})
+
+// bp: {temperature: {low: 100, high: 120, unit: '°C'}, pressure: {low: 50, unit: 'mmHg'}};
+
+let density = parseNumbersUnit('1.5-1.51', {
+  defaultUnit: 'g/mL'
+})
+
+// density: {low: 1.5, high: 1.51, unit: 'g/mL'}
+
+
 ```
 
 ## [API Documentation](https://cheminfo.github.io/parse-physical/)
