@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.0.2](https://www.github.com/cheminfo/parse-physical/compare/v0.0.1...v0.0.2) (2021-01-30)
+
+
+### Bug Fixes
+
+* add missing build script ([912969d](https://www.github.com/cheminfo/parse-physical/commit/912969d803d3c495d1e6ea009617d0b5890bd166))
+* rename to properties-parser ([b1de724](https://www.github.com/cheminfo/parse-physical/commit/b1de724591874b148f458ad277366fb66c841f00))
+
 ### 0.0.1 (2021-01-30)
 
 ### Features
