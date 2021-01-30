@@ -1,6 +1,6 @@
 {
   "name": "properties-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Try to parse a string containing physical data like bp, mp",
   "main": "lib/index.js",
   "module": "src/index.js",
