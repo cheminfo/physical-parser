@@ -1,0 +1,54 @@
+{
+  "name": "parse-physical",
+  "version": "0.0.0",
+  "description": "Try to parse a string containing physical data like bp, mp",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepublishOnly": "rollup -c",
+    "test": "npm run test-coverage && npm run eslint",
+    "test-coverage": "jest --coverage",
+    "test-only": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/parse-physical.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/parse-physical/issues"
+  },
+  "homepage": "https://github.com/cheminfo/parse-physical#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@types/jest": "^26.0.20",
+    "eslint": "^7.18.0",
+    "eslint-config-cheminfo": "^5.2.2",
+    "jest": "^26.6.3",
+    "jest-matcher-deep-close-to": "^2.0.1",
+    "papaparse": "^5.3.0",
+    "prettier": "^2.2.1",
+    "rollup": "^2.38.1"
+  },
+  "dependencies": {
+    "js-quantities": "^1.7.6"
+  }
+}
