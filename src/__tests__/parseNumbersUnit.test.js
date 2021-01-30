@@ -86,5 +86,9 @@ describe('parseNumbersUnit', () => {
     expect(() => parseNumbersUnit('<19')).toThrow(
       'Can not parseNumbersUnit of: <19',
     );
+
+    expect(() => parseNumbersUnit('none')).toThrow(
+      'Can not parseNumbersUnit of: none',
+    );
   });
 });

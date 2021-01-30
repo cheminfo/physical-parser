@@ -26,8 +26,12 @@ export function parseNumbersUnit(string = '', options = {}) {
   let low;
   let high;
 
-  if (numbers === '' && defaultValue) {
-    numbers = String(defaultValue).replace(/ /g, '');
+  if (numbers === '') {
+    if (defaultValue) {
+      numbers = String(defaultValue).replace(/ /g, '');
+    } else {
+      throw Error(`Can not parseNumbersUnit of: ${string}`);
+    }
   }
 
   if (numbers.includes('--')) {
