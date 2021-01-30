@@ -1,5 +1,5 @@
 {
-  "name": "properties-parser",
+  "name": "physical-parser",
   "version": "0.0.2",
   "description": "Try to parse a string containing physical data like bp, mp",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
     "src"
   ],
   "scripts": {
-    "build": "cheminfo-build --entry src/index.js --root PropertiesParser",
+    "build": "cheminfo-build --entry src/index.js --root PhysicalParser",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cheminfo/properties-parser.git"
+    "url": "git+https://github.com/cheminfo/physical-parser.git"
   },
   "keywords": [],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheminfo/properties-parser/issues"
+    "url": "https://github.com/cheminfo/physical-parser/issues"
   },
-  "homepage": "https://github.com/cheminfo/properties-parser#readme",
+  "homepage": "https://github.com/cheminfo/physical-parser#readme",
   "jest": {
     "testEnvironment": "node"
   },

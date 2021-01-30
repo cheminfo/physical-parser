@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: 14.x
-  PACKAGE_NAME: 'properties-parser'
+  PACKAGE_NAME: 'physical-parser'
 
 jobs:
   release-please:

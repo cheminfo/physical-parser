@@ -1,4 +1,4 @@
-# properties-parser
+# physical-parser
 
 [![NPM version][npm-image]][npm-url]
 [![build status][ci-image]][ci-url]
@@ -9,12 +9,12 @@ Try to parse a string containing physical data like bp, mp.
 
 ## Installation
 
-`$ npm i properties-parser`
+`$ npm i physical-parser`
 
 ## Usage
 
 ```js
-import { parseBP, parseMP, parseNumbersUnit } from 'properties-parser';
+import { parseBP, parseMP, parseNumbersUnit } from 'physical-parser';
 
 let bp = parseBP('100-120 @ 50 mmHg', {
   temperature: {
@@ -37,17 +37,17 @@ let density = parseNumbersUnit('1.5-1.51', {
 
 ```
 
-## [API Documentation](https://cheminfo.github.io/properties-parser/)
+## [API Documentation](https://cheminfo.github.io/physical-parser/)
 
 ## License
 
 [MIT](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/properties-parser.svg
-[npm-url]: https://www.npmjs.com/package/properties-parser
-[ci-image]: https://github.com/cheminfo/properties-parser/workflows/Node.js%20CI/badge.svg?branch=master
-[ci-url]: https://github.com/cheminfo/properties-parser/actions?query=workflow%3A%22Node.js+CI%22
-[codecov-image]: https://img.shields.io/codecov/c/github/cheminfo/properties-parser.svg
-[codecov-url]: https://codecov.io/gh/cheminfo/properties-parser
-[download-image]: https://img.shields.io/npm/dm/properties-parser.svg
-[download-url]: https://www.npmjs.com/package/properties-parser
+[npm-image]: https://img.shields.io/npm/v/physical-parser.svg
+[npm-url]: https://www.npmjs.com/package/physical-parser
+[ci-image]: https://github.com/cheminfo/physical-parser/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-url]: https://github.com/cheminfo/physical-parser/actions?query=workflow%3A%22Node.js+CI%22
+[codecov-image]: https://img.shields.io/codecov/c/github/cheminfo/physical-parser.svg
+[codecov-url]: https://codecov.io/gh/cheminfo/physical-parser
+[download-image]: https://img.shields.io/npm/dm/physical-parser.svg
+[download-url]: https://www.npmjs.com/package/physical-parser
