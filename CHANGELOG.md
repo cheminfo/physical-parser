@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/cheminfo/physical-parser/compare/v0.1.1...v0.1.2) (2021-01-31)
+
+
+### Bug Fixes
+
+* correct require and fix build ([30fb7bf](https://www.github.com/cheminfo/physical-parser/commit/30fb7bf618074df252d4a7604ee85a41005614dd))
+
 ### [0.1.1](https://www.github.com/cheminfo/physical-parser/compare/v0.1.0...v0.1.1) (2021-01-30)
 
 
