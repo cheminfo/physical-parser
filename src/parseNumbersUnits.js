@@ -1,11 +1,11 @@
-const Qty = require('js-quantities');
+import Qty from 'js-quantities';
 
 /**
  * Parse a string that may contain min / max and units values
  * @param {string} string
  * @param {object} [options={}]
  * @param {number} [options.defaultValue]
- * @param {string} [options.defaultUnits]
+ * @param {string} [options.defjaultUnits]
  * @param {string} [options.targetUnits]
  * @param {string} [options.optional=false] Is this value optional. Would through an error if empty and not optional
  */
