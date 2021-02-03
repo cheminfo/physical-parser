@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/cheminfo/physical-parser/compare/v0.2.0...v0.3.0) (2021-02-03)
+
+
+### Features
+
+* add parseVaporPressure ([8a56e44](https://www.github.com/cheminfo/physical-parser/commit/8a56e440ff3e64d68661e07340e24709b9a6ef88))
+
 ## [0.2.0](https://www.github.com/cheminfo/physical-parser/compare/v0.1.1...v0.2.0) (2021-02-03)
 
 
