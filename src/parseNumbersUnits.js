@@ -17,6 +17,14 @@ export function parseNumbersUnits(string = '', options = {}) {
     optional = false,
   } = options;
   let normalized = String(string).replace(/ /g, '').replace(/,/g, '.');
+
+  if (normalized.match(/^\(.*\)$/)) {
+    normalized = normalized.substring(1, normalized.length - 2);
+  }
+
+  // still parenthesis ??? We remove what is after
+  normalized = normalized.replace(/\(.*/, '');
+
   if (optional && !normalized) return {};
   let splitter = /^([0-9.Ee-]*)([a-zA-Z °]*)$/;
   if (!normalized.match(splitter)) {

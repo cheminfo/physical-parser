@@ -28,6 +28,7 @@ describe('parseBoilingPoint', () => {
       });
       expect(result.temperature.low).toStrictEqual(entry.low);
       expect(result.temperature.high).toStrictEqual(entry.high);
+      expect(result.temperature.units).toStrictEqual(entry.units);
       expect(result.pressure.low).toBeCloseTo(entry.pressure || 760);
       expect(result.pressure.units).toStrictEqual(entry.pressureUnits);
     }

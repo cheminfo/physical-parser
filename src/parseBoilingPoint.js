@@ -14,8 +14,7 @@ import { parseNumbersUnits } from './parseNumbersUnits';
  * @param {string} [options.pressure.optional]
  */
 export function parseBoilingPoint(string, options = {}) {
-  let parts = String(string).split(/[@/]|, /);
-
+  let parts = String(string).split(/[@/]|, | at /);
   return {
     temperature: parseNumbersUnits(parts[0], options.temperature),
     pressure: parseNumbersUnits(parts[1], options.pressure),
