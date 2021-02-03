@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/cheminfo/physical-parser/compare/v0.1.1...v0.2.0) (2021-02-03)
+
+
+### Features
+
+* improve boilingPoint parser ([523d197](https://www.github.com/cheminfo/physical-parser/commit/523d197c53c3fc9438bef009aed0199f478569b5))
+
+
+### Bug Fixes
+
+* correct require and fix build ([30fb7bf](https://www.github.com/cheminfo/physical-parser/commit/30fb7bf618074df252d4a7604ee85a41005614dd))
+
 ### [0.1.1](https://www.github.com/cheminfo/physical-parser/compare/v0.1.0...v0.1.1) (2021-01-30)
 
 
