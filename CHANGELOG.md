@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/cheminfo/physical-parser/compare/v0.3.0...v0.3.1) (2023-01-03)
+
+
+### Bug Fixes
+
+* improve parseRefractiveIndex ([9965763](https://github.com/cheminfo/physical-parser/commit/99657630257f5533cbf87493f32fa0cbec5cc6f0))
+
 ## [0.3.0](https://www.github.com/cheminfo/physical-parser/compare/v0.2.0...v0.3.0) (2021-02-03)
 
 

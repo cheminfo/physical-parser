@@ -1,6 +1,6 @@
 {
   "name": "physical-parser",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Try to parse a string containing physical data like bp, mp",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -33,7 +33,6 @@
   "jest": {
     "testEnvironment": "node"
   },
-
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "@types/jest": "^29.2.5",
