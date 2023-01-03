@@ -13,7 +13,8 @@ import { parseNumbersUnits } from './parseNumbersUnits';
  * @param {string} [options.temperature.targetUnits]
  */
 export function parseRefractiveIndex(string, options = {}) {
-  let parts = String(string).split(/[@/]|, /);
+  string = String(string).replace(/^[^0-9.]*/, '');
+  let parts = string.split(/at|[@/]|, /);
 
   let value = parts[0];
   let temperature = parts[1];

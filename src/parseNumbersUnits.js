@@ -18,6 +18,8 @@ export function parseNumbersUnits(string = '', options = {}) {
   } = options;
   let normalized = String(string).replace(/ /g, '').replace(/,/g, '.');
 
+  normalized = normalized.replace(/Â°/g, '°');
+
   if (normalized.match(/^\(.*\)$/)) {
     normalized = normalized.substring(1, normalized.length - 2);
   }
