@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/cheminfo/physical-parser/compare/v0.3.1...v0.3.2) (2023-01-03)
+
+
+### Bug Fixes
+
+* extension of rollup.config ([67831c5](https://github.com/cheminfo/physical-parser/commit/67831c5297f6e799ba361a8039639c6cd4339e59))
+
 ## [0.3.1](https://github.com/cheminfo/physical-parser/compare/v0.3.0...v0.3.1) (2023-01-03)
 
 
