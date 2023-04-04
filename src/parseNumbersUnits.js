@@ -28,7 +28,7 @@ export function parseNumbersUnits(string = '', options = {}) {
   normalized = normalized.replace(/\(.*/, '');
 
   if (optional && !normalized) return {};
-  let splitter = /^([0-9.Ee-]*)([a-zA-Z °]*)$/;
+  let splitter = /^([0-9.Ee-]*)([a-zA-Z^/ °0-9]*)$/;
   if (!normalized.match(splitter)) {
     throw Error(`Can not parseNumbersUnits of: ${string}`);
   }

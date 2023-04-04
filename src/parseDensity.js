@@ -13,7 +13,10 @@ import { parseNumbersUnits } from './parseNumbersUnits';
  * @param {string} [options.temperature.targetUnits]
  */
 export function parseDensity(string, options = {}) {
-  let parts = String(string).split(/[@/]|, /);
+  string = String(string);
+  string = string.replace(/\(.*/, '');
+  string = string.replace('g/cu cm', 'g/cm^3');
+  let parts = String(string).split(/[@]|, | at /);
 
   let value = parts[0];
   let temperature = parts[1];
