@@ -1,6 +1,6 @@
 {
   "name": "physical-parser",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Try to parse a string containing physical data like bp, mp",
   "main": "lib/index.js",
   "module": "src/index.js",
