@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/cheminfo/physical-parser/compare/v0.3.2...v0.4.0) (2023-04-04)
+
+
+### Features
+
+* improve parseDensity ([5cc0ecd](https://github.com/cheminfo/physical-parser/commit/5cc0ecddf75a2e2f57b2fbfa2525632d271f2cf8))
+
 ## [0.3.2](https://github.com/cheminfo/physical-parser/compare/v0.3.1...v0.3.2) (2023-01-03)
 
 
